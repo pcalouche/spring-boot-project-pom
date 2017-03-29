@@ -8,6 +8,7 @@
     <artifactId>spring-web-project-pom</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+    <name>Spring Web Project Pom</name>
 
     <properties>
         <!-- Misc Properties -->
@@ -167,39 +168,40 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>${maven.exec.version}</version>
-                </plugin>
-                <!-- Apache Maven Compiler Plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compiler.version}</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <!-- Maven Surefire Plugin -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${maven.surefire.version}</version>
-                </plugin>
-                <!-- Apache Maven WAR Plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven.war.version}</version>
-                    <configuration>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <finalName>spring-web-project-pom</finalName>
+        <!--<pluginManagement>-->
+            <!--<plugins>-->
+                <!--<plugin>-->
+                    <!--<groupId>org.codehaus.mojo</groupId>-->
+                    <!--<artifactId>exec-maven-plugin</artifactId>-->
+                    <!--<version>${maven.exec.version}</version>-->
+                <!--</plugin>-->
+                <!--&lt;!&ndash; Apache Maven Compiler Plugin &ndash;&gt;-->
+                <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                    <!--<version>${maven.compiler.version}</version>-->
+                    <!--<configuration>-->
+                        <!--<source>${java.version}</source>-->
+                        <!--<target>${java.version}</target>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
+                <!--<plugin>-->
+                    <!--&lt;!&ndash; Maven Surefire Plugin &ndash;&gt;-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                    <!--<version>${maven.surefire.version}</version>-->
+                <!--</plugin>-->
+                <!--&lt;!&ndash; Apache Maven WAR Plugin &ndash;&gt;-->
+                <!--<plugin>-->
+                    <!--<groupId>org.apache.maven.plugins</groupId>-->
+                    <!--<artifactId>maven-war-plugin</artifactId>-->
+                    <!--<version>${maven.war.version}</version>-->
+                    <!--<configuration>-->
+                        <!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
+            <!--</plugins>-->
+        <!--</pluginManagement>-->
     </build>
 </project>
