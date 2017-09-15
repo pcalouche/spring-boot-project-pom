@@ -17,20 +17,24 @@
     <name>Spring Boot Project Common POM</name>
 
     <properties>
-        <!-- Recommended Properties Below-->
+        <!-- Recommended Properties Below -->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
         <!-- Recommended Application Dependency Versions Below -->
         <spring-boot.version>1.5.6.RELEASE</spring-boot.version> <!-- July 2017 (Should match spring-boot-starter-parent version -->
         <postgresql.version>42.1.4</postgresql.version> <!-- August 2017 -->
         <thymeleaf.version>3.0.7.RELEASE</thymeleaf.version> <!-- July 2017 -->
+
         <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
-        <!-- Recommended Test Dependency Versions -->
-        <!-- Recommended Plugin Versions -->
+
+        <!-- Recommended Test Dependency Versions Below -->
+
+        <!-- Recommended Plugin Versions Below-->
         <maven.exec.version>1.6.0</maven.exec.version> <!--March 2017-->
-        <maven.compiler.version>3.6.1</maven.compiler.version><!-- January 2017 -->
-        <maven.war.version>3.1.0</maven.war.version><!-- April 2017 -->
+        <maven.compiler.version>3.6.1</maven.compiler.version> <!-- January 2017 -->
+        <maven.war.version>3.1.0</maven.war.version> <!-- April 2017 -->
         <maven.surefire.version>2.20</maven.surefire.version> <!-- April 2017 -->
         <maven.failsafe.version>2.20</maven.failsafe.version> <!-- April 2017 -->
     </properties>
@@ -43,7 +47,7 @@
     -->
     <dependencyManagement>
         <dependencies>
-            <!-- Recommended Application Dependencies Below-->
+            <!-- Recommended Application Dependencies Below -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -55,9 +59,8 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!-- Recommended Test Dependencies Below -->
-            <!-- Recommended Provided Dependencies Below -->
-            <!-- Recommended Runtime and Optional Dependencies Below -->
+
+            <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
@@ -65,13 +68,14 @@
                 <optional>true</optional>
                 <scope>runtime</scope>
             </dependency>
-            <!-- PostgreSQL JDBC Driver -->
             <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
                 <scope>runtime</scope>
             </dependency>
+
+            <!-- Recommended Test Dependencies Below -->
         </dependencies>
     </dependencyManagement>
 
@@ -82,9 +86,10 @@
     -->
     <dependencies>
         <!-- Recommended Application Dependencies Below-->
+
+        <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
+
         <!-- Recommended Test Dependencies Below -->
-        <!-- Recommended Provided Dependencies Below -->
-        <!-- Recommended Runtime and Optional Dependencies Below -->
     </dependencies>
 
     <build>
