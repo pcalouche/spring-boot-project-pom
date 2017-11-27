@@ -7,139 +7,101 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version><!-- July 2017 -->
+        <version>1.5.8.RELEASE</version> <!--October 2017-->
     </parent>
 
     <groupId>com.pcalouche</groupId>
-    <artifactId>spring-boot-project</artifactId>
-    <version>1.0.1</version>
+    <artifactId>spring-boot-project-pom</artifactId>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
+    <developers>
+        <developer>
+            <name>Philip Calouche</name>
+            <email>philip.calouche@outlook.com</email>
+        </developer>
+    </developers>
+
     <properties>
-        <!-- Recommended Properties Below -->
+        <!--Recommended Properties Below-->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <!-- Recommended Application Dependency Versions Below -->
-        <spring-boot.version>1.5.6.RELEASE</spring-boot.version> <!-- July 2017 (Should match spring-boot-starter-parent version -->
-        <postgresql.version>42.1.4</postgresql.version> <!-- August 2017 -->
-        <thymeleaf.version>3.0.7.RELEASE</thymeleaf.version> <!-- July 2017 -->
-
-        <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
-
-        <!-- Recommended Test Dependency Versions Below -->
-
-        <!-- Recommended Plugin Versions Below-->
-        <maven.exec.version>1.6.0</maven.exec.version> <!--March 2017-->
-        <maven.compiler.version>3.6.1</maven.compiler.version> <!-- January 2017 -->
-        <maven.war.version>3.1.0</maven.war.version> <!-- April 2017 -->
-        <maven.surefire.version>2.20</maven.surefire.version> <!-- April 2017 -->
-        <maven.failsafe.version>2.20</maven.failsafe.version> <!-- April 2017 -->
+        <!--Recommended Application Dependency Versions Below-->
+        <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
+        <jjwt.version>0.9.0</jjwt.version>
+        <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
+        <postgresql.version>42.1.4</postgresql.version> <!--August 2017-->
+        <!--Recommended Test Dependency Versions-->
+        <selenium.version>3.7.1</selenium.version> <!--November 2017-->
+        <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
+        <!--Recommended Plugin Versions-->
+        <!--
+           Before adding a plugin version here check in the spring boot spring-boot-dependencies POM which is two parent POMs up to see if it already exists
+           Parent POMs can be viewed by hitting F4 on the parent POM reference in the pom.xml file.  Follow the naming convention in there to override
+           the version versus creating a new property.
+        -->
     </properties>
 
     <!--
-        Anything in dependency management will NOT be automatically by a child POM.  The child POM should NOT include the version
-        if it chooses to include one of these dependencies.  The version in this POM is the recommended version and that is the
-        version the child POM receives by importing one of these dependencies.  However, if child POM needs to use an alternative
-        version for a good technical reason then the child POM can override the version.
-    -->
+      Anything in dependency management will NOT be automatically by a child POM.  The child POM should NOT include the version
+      if it chooses to include one of these dependencies.  The version in this POM is the recommended version and that is the
+      version the child POM receives by importing one of these dependencies.  However, if child POM needs to use an alternative
+      version for a good technical reason then the child POM can override the version.
+   -->
     <dependencyManagement>
         <dependencies>
-            <!-- Recommended Application Dependencies Below -->
+            <!--Recommended Application Dependencies Below-->
+            <!--Apache Commons Lang for helpful utility methods not included in core Java-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>nz.net.ultraq.thymeleaf</groupId>
-                        <artifactId>thymeleaf-layout-dialect</artifactId>
-                    </exclusion>
-                </exclusions>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
-
-            <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
+            <!--JSON Web Token Support for the JVM-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-devtools</artifactId>
-                <version>${spring-boot.version}</version>
-                <optional>true</optional>
-                <scope>runtime</scope>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
+            <!--Recommended Test Dependencies Below-->
+            <!--Selenium for WebDriver for Web Browser Automation-->
             <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgresql.version}</version>
-                <scope>runtime</scope>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium.version}</version>
             </dependency>
-
-            <!-- Recommended Test Dependencies Below -->
+            <!--Cucumber JUnit for Cucumber Tests-->
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--Cucumber Spring for Spring support in Cucumber-->
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-spring</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
+            <!--PostgreSQL JDBC Driver-->
         </dependencies>
     </dependencyManagement>
 
-    <!--
-        Anything in dependencies will be automatically imported by a POM that imports this POM as a dependency.  No additional
-        references to these dependencies is required by the child POM. However, if the child POM needs to use an alternative
-        version for a good technical reason then the child POM can override the version.
-    -->
-    <dependencies>
-        <!-- Recommended Application Dependencies Below-->
-
-        <!-- Recommended Provided, Runtime, and Optional Dependencies Below -->
-
-        <!-- Recommended Test Dependencies Below -->
-    </dependencies>
-
     <build>
-        <finalName>spring-boot-project</finalName>
+        <finalName>spring-boot-project-pom</finalName>
         <!--
-           This just sets the versions of plugins to use .  The child POM will need to supply any additional configuration for the plugin.
+           This just sets the versions of plugins to use.  The child POM will need to supply any additional configuration for the plugin.
+
+           Plugins already managed in the spring-boot-dependencies parent POM do NOT need to be included here.  Only their version property
+           needs to be overridden in the the properties section of this POM.
+
            The version in this POM is the recommended version is the recommended version and that is what the POM doing the import will receive.
-           However, if the POM doing the import needs to use an alternative version for a good technical reason the it can be  overridden in the
+           However, if the POM doing the import needs to use an alternative version for a good technical reason the it can be overridden in the
            POM doing the import.
-       -->
-        <pluginManagement>
-            <plugins>
-                <!-- Maven Exec Plugin for running various execution tasks -->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>${maven.exec.version}</version>
-                </plugin>
-                <!-- Maven Compiler Plugin for building JARs -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compiler.version}</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                    </configuration>
-                </plugin>
-                <!-- Maven WAR Plugin for building WARs -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven.war.version}</version>
-                    <configuration>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-                </plugin>
-                <!-- Maven Surefire Plugin for running Unit tests -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${maven.surefire.version}</version>
-                </plugin>
-                <!-- Maven Failsafe Plugin for running Integration tests -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>${maven.failsafe.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+         -->
     </build>
 </project>
