@@ -40,8 +40,11 @@
         <!--
            Before adding a plugin version here check in the spring boot spring-boot-dependencies POM which is two parent POMs up to see if it already exists
            Parent POMs can be viewed by hitting F4 on the parent POM reference in the pom.xml file.  Follow the naming convention in there to override
-           the version versus creating a new property.
+           the version versus creating a new property.  It has been shown that some of the Maven plugins are pretty old in the Spring Boot parent POM
+           and their newer versions work better.
         -->
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version> <!--June 2016-->
+        <maven-war-plugin.version>3.2.0</maven-war-plugin.version> <!--September 2017-->
     </properties>
 
     <!--
