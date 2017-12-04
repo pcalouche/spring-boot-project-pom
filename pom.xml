@@ -28,15 +28,19 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
         <!--Recommended Application Dependency Versions Below-->
         <spring-boot.version>1.5.9.RELEASE</spring-boot.version>  <!--November 2017-->
         <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
         <jjwt.version>0.9.0</jjwt.version>
-        <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
-        <postgresql.version>42.1.4</postgresql.version> <!--August 2017-->
+
         <!--Recommended Test Dependency Versions-->
         <selenium.version>3.7.1</selenium.version> <!--November 2017-->
         <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
+
+        <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
+        <postgresql.version>42.1.4</postgresql.version> <!--August 2017-->
+
         <!--Recommended Plugin Versions-->
         <!--
            Before adding a plugin version here check in the spring boot spring-boot-dependencies POM which is two parent POMs up to see if it already exists
@@ -92,7 +96,6 @@
                 <scope>test</scope>
             </dependency>
             <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
-            <!--PostgreSQL JDBC Driver-->
         </dependencies>
     </dependencyManagement>
 
