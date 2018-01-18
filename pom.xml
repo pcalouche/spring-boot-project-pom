@@ -12,7 +12,7 @@
 
     <groupId>com.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>1.0.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
@@ -28,6 +28,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--The packaging property is used by some Spring Boot project's to toggle jar/war packaging-->
+        <packaging>jar</packaging>
 
         <!--Recommended Application Dependency Versions Below-->
         <spring-boot.version>1.5.9.RELEASE</spring-boot.version>  <!--November 2017-->
@@ -35,7 +37,7 @@
         <jjwt.version>0.9.0</jjwt.version>
 
         <!--Recommended Test Dependency Versions-->
-        <selenium.version>3.7.1</selenium.version> <!--November 2017-->
+        <selenium.version>3.8.1</selenium.version> <!--December 2017-->
         <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
@@ -106,8 +108,8 @@
            Plugins already managed in the spring-boot-dependencies parent POM do NOT need to be included here.  Only their version property
            needs to be overridden in the the properties section of this POM.
 
-           The version in this POM is the recommended version is the recommended version and that is what the POM doing the import will receive.
-           However, if the POM doing the import needs to use an alternative version for a good technical reason the it can be overridden in the
+           The version in this POM is the recommended version is the recommended version and that is what a child POM uses by default.
+           However, if the child POM to use an alternative version for a good technical reason the it can be overridden in the
            POM doing the import.
          -->
     </build>
