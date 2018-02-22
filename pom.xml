@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version> <!--November 2017-->
+        <version>1.5.10.RELEASE</version> <!--January 2018-->
     </parent>
 
     <groupId>com.pcalouche</groupId>
@@ -32,16 +32,16 @@
         <packaging>jar</packaging>
 
         <!--Recommended Application Dependency Versions Below-->
-        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>  <!--November 2017-->
         <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
-        <jjwt.version>0.9.0</jjwt.version>
+        <jjwt.version>0.9.0</jjwt.version> <!--October 2017-->
+        <model-mapper.version>1.1.2</model-mapper.version> <!--January 2018-->
 
         <!--Recommended Test Dependency Versions-->
-        <selenium.version>3.8.1</selenium.version> <!--December 2017-->
+        <selenium.version>3.9.1</selenium.version> <!--February 2018-->
         <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
-        <postgresql.version>42.1.4</postgresql.version> <!--August 2017-->
+        <postgresql.version>42.2.1</postgresql.version> <!--January 2018-->
 
         <!--Recommended Plugin Versions-->
         <!--
@@ -75,6 +75,12 @@
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
+            </dependency>
+            <!--ModelMapper-->
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>${model-mapper.version}</version>
             </dependency>
             <!--Recommended Test Dependencies Below-->
             <!--Selenium for WebDriver for Web Browser Automation-->
