@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version> <!--March 2018-->
+        <version>2.0.1.RELEASE</version> <!--April 2018-->
     </parent>
 
     <groupId>com.pcalouche</groupId>
@@ -37,10 +37,9 @@
         <model-mapper.version>1.1.2</model-mapper.version> <!--January 2018-->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
-        <postgresql.version>42.2.1</postgresql.version> <!--January 2018-->
 
         <!--Recommended Test Dependency Versions-->
-        <selenium.version>3.9.1</selenium.version> <!--February 2018-->
+        <selenium.version>3.11.0</selenium.version> <!--March 2018-->
         <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
 
         <!--Recommended Plugin Versions-->
@@ -50,10 +49,9 @@
            the version versus creating a new property.  It has been shown that some of the Maven plugins are pretty old in the Spring Boot parent POM
            and their newer versions work better.
         -->
-        <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version> <!--March 2018-->
-        <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version> <!--March 2018-->
         <maven-war-plugin.version>3.2.0</maven-war-plugin.version> <!--September 2017-->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version> <!--March 2017-->
+        <cucumber-reporting-plugin.version>3.15.0</cucumber-reporting-plugin.version> <!--February 2018 -->
     </properties>
 
     <!--
