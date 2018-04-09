@@ -51,6 +51,7 @@
         -->
         <maven-war-plugin.version>3.2.0</maven-war-plugin.version> <!--September 2017-->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version> <!--March 2017-->
+        <cucumber-jvm-parallel-plugin.version>4.2.0</cucumber-jvm-parallel-plugin.version> <!--August 2017-->
         <cucumber-reporting-plugin.version>3.15.0</cucumber-reporting-plugin.version> <!--February 2018 -->
     </properties>
 
