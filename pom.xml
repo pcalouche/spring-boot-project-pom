@@ -12,9 +12,30 @@
 
     <groupId>com.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>bintray-plugins</name>
+            <url>https://jcenter.bintray.com</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <developers>
         <developer>
@@ -35,6 +56,7 @@
         <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
         <jjwt.version>0.9.0</jjwt.version> <!--October 2017-->
         <model-mapper.version>1.1.2</model-mapper.version> <!--January 2018-->
+        <spring-fox.version>2.9.0</spring-fox.version>
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
 
@@ -81,6 +103,22 @@
                 <groupId>org.modelmapper</groupId>
                 <artifactId>modelmapper</artifactId>
                 <version>${model-mapper.version}</version>
+            </dependency>
+            <!--SpringFox Swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${spring-fox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${spring-fox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${spring-fox.version}</version>
             </dependency>
 
             <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
