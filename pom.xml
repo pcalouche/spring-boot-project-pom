@@ -56,6 +56,7 @@
         <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
         <jjwt.version>0.9.0</jjwt.version> <!--October 2017-->
         <model-mapper.version>2.0.0</model-mapper.version> <!--May 2018-->
+        <lombok.version>1.18.0</lombok.version> <!--June 2018-->
         <spring-fox.version>2.9.0</spring-fox.version>
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
@@ -122,6 +123,13 @@
             </dependency>
 
             <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
+            <!--Lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <!--Recommended Test Dependencies Below-->
             <!--Selenium for WebDriver for Web Browser Automation-->
