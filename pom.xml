@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version> <!--July 2018-->
+        <version>2.0.6.RELEASE</version> <!--October 2018-->
     </parent>
 
     <groupId>com.pcalouche</groupId>
@@ -53,10 +53,9 @@
         <packaging>jar</packaging>
 
         <!--Recommended Application Dependency Versions Below-->
-        <commons-lang3.version>3.7</commons-lang3.version> <!--November 2017-->
+        <commons-lang3.version>3.8.1</commons-lang3.version> <!--September 2017-->
         <jjwt.version>0.9.1</jjwt.version> <!--July 2018-->
-        <model-mapper.version>2.1.0</model-mapper.version> <!--July 2018-->
-        <lombok.version>1.18.2</lombok.version> <!--July 2018-->
+        <model-mapper.version>2.3.0</model-mapper.version> <!--September 2018-->
         <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
@@ -72,8 +71,6 @@
            the version versus creating a new property.  It has been shown that some of the Maven plugins are pretty old in the Spring Boot parent POM
            and their newer versions work better.
         -->
-        <maven-war-plugin.version>3.2.2</maven-war-plugin.version> <!--June 2018 -->
-        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version> <!--March 2017-->
         <cucumber-jvm-parallel-plugin.version>4.2.0</cucumber-jvm-parallel-plugin.version> <!--August 2017-->
         <cucumber-reporting-plugin.version>3.15.0</cucumber-reporting-plugin.version> <!--February 2018 -->
     </properties>
