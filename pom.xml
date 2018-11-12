@@ -73,7 +73,7 @@
         <!--Recommended Application Dependency Versions Below-->
         <commons-lang3.version>3.8.1</commons-lang3.version> <!--September 2017-->
         <jjwt.version>0.9.1</jjwt.version> <!--July 2018-->
-        <model-mapper.version>2.3.0</model-mapper.version> <!--September 2018-->
+        <model-mapper.version>2.3.1</model-mapper.version> <!--October 2018-->
         <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
