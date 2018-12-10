@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version> <!--October 2018-->
+        <version>2.1.1.RELEASE</version> <!--November 2018-->
     </parent>
 
     <groupId>com.pcalouche</groupId>
