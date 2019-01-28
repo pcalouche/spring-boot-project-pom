@@ -10,7 +10,7 @@
         <version>2.1.2.RELEASE</version> <!--January 2019-->
     </parent>
 
-    <groupId>com.pcalouche</groupId>
+    <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
