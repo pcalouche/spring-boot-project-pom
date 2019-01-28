@@ -7,34 +7,34 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version> <!--November 2018-->
+        <version>2.1.2.RELEASE</version> <!--January 2019-->
     </parent>
 
-    <groupId>com.pcalouche</groupId>
+    <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<id>central</id>-->
+            <!--<name>bintray</name>-->
+            <!--<url>https://jcenter.bintray.com</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<id>spring-milestones</id>-->
+            <!--<name>Spring Milestones</name>-->
+            <!--<url>https://repo.spring.io/milestone</url>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
 
-    </repositories>
     <pluginRepositories>
         <pluginRepository>
             <snapshots>
@@ -73,7 +73,7 @@
         <!--Recommended Application Dependency Versions Below-->
         <commons-lang3.version>3.8.1</commons-lang3.version> <!--September 2017-->
         <jjwt.version>0.9.1</jjwt.version> <!--July 2018-->
-        <model-mapper.version>2.3.1</model-mapper.version> <!--October 2018-->
+        <model-mapper.version>2.3.2</model-mapper.version> <!--November 2018-->
         <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
