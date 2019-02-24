@@ -1,8 +1,26 @@
 == Spring Boot Project Common POM
 
-This is a convenience parent POM artifact to help not only manage Spring Boot dependencies and maven plugin versions, but also commonly used web application dependencies like Apache POI, database drivers, etc.
+This is a convenience parent POM artifact to help not only manage Spring Boot dependencies and maven plugin versions, but also commonly used application
+dependencies like Apache POI, database drivers, etc.
 
 == How to Install
-From inside Spring Boot Project POM main directory:
+Include this repository in your pom.xml.
 
-  ./mvnw clean install
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Include as a parent pom in your pom.xml
+
+```xml
+<parent>
+    <groupId>com.github.pcalouche</groupId>
+    <artifactId>spring-boot-project-pom</artifactId>
+    <version>1.4</version>
+</parent>
+```
