@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.3.RELEASE</version> <!--February 2019-->
+        <version>2.2.2.RELEASE</version> <!--December 2019-->
     </parent>
 
     <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
@@ -26,33 +26,20 @@
     <properties>
         <!--Recommended Properties Below-->
         <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--The packaging property is used by some Spring Boot project's to toggle jar/war packaging-->
         <packaging>jar</packaging>
 
         <!--Recommended Application Dependency Versions Below-->
-        <commons-lang3.version>3.8.1</commons-lang3.version> <!--September 2018-->
-        <apache-poi.version>4.0.1</apache-poi.version> <!--December 2018-->
-        <jjwt.version>0.9.1</jjwt.version> <!--July 2018-->
-        <model-mapper.version>2.3.2</model-mapper.version> <!--November 2018-->
+        <apache-poi.version>4.1.1</apache-poi.version> <!--October 2019-->
+        <jjwt.version>0.10.7</jjwt.version> <!--July 2018-->
+        <model-mapper.version>2.3.5</model-mapper.version> <!--June 2019-->
         <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
 
         <!--Recommended Test Dependency Versions-->
-        <selenium.version>3.11.0</selenium.version> <!--March 2018-->
-        <cucumber.version>1.2.5</cucumber.version> <!--September 2016-->
 
         <!--Recommended Plugin Versions-->
-        <!--
-           Before adding a plugin version here check in the spring boot spring-boot-dependencies POM which is two parent POMs up to see if it already exists
-           Parent POMs can be viewed by hitting F4 on the parent POM reference in the pom.xml file.  Follow the naming convention in there to override
-           the version versus creating a new property.  It has been shown that some of the Maven plugins are pretty old in the Spring Boot parent POM
-           and their newer versions work better.
-        -->
-        <cucumber-jvm-parallel-plugin.version>4.2.0</cucumber-jvm-parallel-plugin.version> <!--August 2017-->
-        <cucumber-reporting-plugin.version>3.15.0</cucumber-reporting-plugin.version> <!--February 2018 -->
     </properties>
 
     <!--
@@ -79,7 +66,12 @@
             <!--JSON Web Token Support for the JVM-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt</artifactId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
                 <version>${jjwt.version}</version>
             </dependency>
             <!--ModelMapper-->
@@ -106,48 +98,8 @@
             </dependency>
 
             <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
-            <!--Lombok-->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <optional>true</optional>
-            </dependency>
 
             <!--Recommended Test Dependencies Below-->
-            <!--Selenium for WebDriver for Web Browser Automation-->
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-java</artifactId>
-                <version>${selenium.version}</version>
-            </dependency>
-            <!--Cucumber JUnit for Cucumber Tests-->
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-junit</artifactId>
-                <version>${cucumber.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <!--Cucumber Spring for Spring support in Cucumber-->
-            <dependency>
-                <groupId>info.cukes</groupId>
-                <artifactId>cucumber-spring</artifactId>
-                <version>${cucumber.version}</version>
-                <scope>test</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <!--
-           This just sets the versions of plugins to use.  The child POM will need to supply any additional configuration for the plugin.
-
-           Plugins already managed in the spring-boot-dependencies parent POM do NOT need to be included here.  Only their version property
-           needs to be overridden in the the properties section of this POM.
-
-           The version in this POM is the recommended version is the recommended version and that is what a child POM uses by default.
-           However, if the child POM to use an alternative version for a good technical reason the it can be overridden in the
-           POM doing the import.
-         -->
-    </build>
 </project>
