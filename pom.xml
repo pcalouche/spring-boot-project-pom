@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version> <!--December 2019-->
+        <version>2.2.5.RELEASE</version> <!--February 2020-->
     </parent>
 
     <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
@@ -30,9 +30,9 @@
         <packaging>jar</packaging>
 
         <!--Recommended Application Dependency Versions Below-->
-        <apache-poi.version>4.1.1</apache-poi.version> <!--October 2019-->
-        <jjwt.version>0.10.7</jjwt.version> <!--July 2018-->
-        <model-mapper.version>2.3.5</model-mapper.version> <!--June 2019-->
+        <apache-poi.version>4.1.2</apache-poi.version> <!--February 2019-->
+        <jjwt.version>0.10.8</jjwt.version> <!--February 2020-->
+        <model-mapper.version>2.3.6</model-mapper.version> <!--December 2019-->
         <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
