@@ -12,7 +12,7 @@
 
     <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
@@ -33,7 +33,7 @@
         <apache-poi.version>4.1.2</apache-poi.version> <!--February 2019-->
         <jjwt.version>0.10.8</jjwt.version> <!--February 2020-->
         <model-mapper.version>2.3.6</model-mapper.version> <!--December 2019-->
-        <spring-fox.version>2.9.2</spring-fox.version> <!-- June 2018 -->
+        <spring-doc.version>1.2.33</spring-doc.version> <!-- March 2020 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
 
@@ -80,21 +80,16 @@
                 <artifactId>modelmapper</artifactId>
                 <version>${model-mapper.version}</version>
             </dependency>
-            <!--SpringFox Swagger-->
+            <!--SpringDoc -->
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${spring-fox.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-security</artifactId>
+                <version>${spring-doc.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-bean-validators</artifactId>
-                <version>${spring-fox.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${spring-fox.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${spring-doc.version}</version>
             </dependency>
 
             <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
