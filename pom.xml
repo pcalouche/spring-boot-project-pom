@@ -25,7 +25,7 @@
 
     <properties>
         <!--Recommended Properties Below-->
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
 
         <!--Recommended Application Dependency Versions Below-->
         <apache-poi.version>4.1.2</apache-poi.version> <!--February 2020-->
