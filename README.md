@@ -24,6 +24,6 @@ Include as a parent pom in your pom.xml
 <parent>
     <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>2.2.1</version>
+    <version>2.4.0</version>
 </parent>
 ```
