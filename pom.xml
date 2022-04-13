@@ -26,6 +26,7 @@
     <properties>
         <!--Recommended Properties Below-->
         <java.version>11</java.version>
+        <maven.compiler.release>11</maven.compiler.release>
 
         <!--Recommended Application Dependency Versions Below-->
         <apache-poi.version>5.2.2</apache-poi.version> <!--March 2022-->
