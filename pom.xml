@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.4</version> <!--February 2022-->
+        <version>2.6.6</version> <!--March 2022-->
     </parent>
 
     <groupId>com.github.pcalouche</groupId>
     <artifactId>spring-boot-project-pom</artifactId>
-    <version>2.4.0</version>
+    <version>2.5.0</version>
     <packaging>pom</packaging>
     <name>Spring Boot Project Common POM</name>
 
@@ -28,10 +28,10 @@
         <java.version>11</java.version>
 
         <!--Recommended Application Dependency Versions Below-->
-        <apache-poi.version>5.2.1</apache-poi.version> <!--March 2022-->
+        <apache-poi.version>5.2.2</apache-poi.version> <!--March 2022-->
         <jjwt.version>0.11.2</jjwt.version> <!--June 2020-->
-        <model-mapper.version>3.1.0</model-mapper.version> <!--May 2022-->
-        <springdoc-openapi.version>1.6.6</springdoc-openapi.version> <!--February 2021 -->
+        <model-mapper.version>3.1.0</model-mapper.version> <!--March 2022-->
+        <springdoc-openapi.version>1.6.7</springdoc-openapi.version> <!--April 2022 -->
 
         <!--Recommended Provided, Runtime, and Optional Dependencies Below-->
 
