@@ -1,5 +1,8 @@
 name: Continuous Integration
 
+on:
+    push
+
 jobs:
   maven-build-lifecycle:
     runs-on: ubuntu-latest
